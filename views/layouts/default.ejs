@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--
-        For demonstration purposes, the `title` is dynamically set here based on
-        your `sails.config.appName` to show that you can inject data into layouts
-        exactly the same way as with your other view templates.
-    -->
     <title><%- title %></title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
@@ -19,29 +14,22 @@
     <link rel="stylesheet" href="/styles/theme.css">
     <!--STYLES END-->
 
-    <style>
-      [ng\:cloak] main,
-      [ng-cloak] main,
-      [data-ng-cloak] main,
-      [x-ng-cloak] main,
-      .ng-cloak main,
-      .x-ng-cloak main,
-      [ng\:cloak] footer,
-      [ng-cloak] footer,
-      [data-ng-cloak] footer,
-      [x-ng-cloak] footer,
-      .ng-cloak footer,
-      .x-ng-cloak footer,
-      .we-loading-hide {
-        display: none !important;
-      }
 
-    </style>
+
+    <!--SCRIPTS-->
+    <script src="/bower_components/platform/platform.js"></script>
+    <script src="/js/libs/socket.io.js"></script>
+    <script src="/js/sails.io.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!--SCRIPTS END-->
+
+    <!-- 2. Load the component using an HTML Import -->
+    <link rel="import" href="my-element.html">
 
   </head>
 
   <body ng-cloak>
-<script type="text/x-handlebars">
+
     <div  class="wrapper main">
         <div class="box">
             <div class="row row-offcanvas row-offcanvas-left">
@@ -96,9 +84,17 @@
 
 
                           <div class="col-sm-8">
-                            <div data-ui-view>
-                              {{outlet}}
-                            </div>{{we-messenger}}
+
+
+
+
+
+  <my-element></my-element>
+
+
+
+
+
                           </div>
 
                         <div class="col-sm-4">
@@ -126,43 +122,5 @@
 
     </div>
 </div>
-
-</script>
-
-<script type="text/x-handlebars" data-template-name="my_layout">
-  <div class="content-wrapper">
-    {{yield}}
-  </div>
-</script>
-
-<script type="text/x-handlebars" data-template-name="my_content">
-  Hello, <b>{{view.name}}</b>!
-</script>
-
-
-
-
-<!--SCRIPTS-->
-<script src="/js/libs/socket.io.js"></script>
-<script src="/js/sails.io.js"></script>
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/handlebars/handlebars.js"></script>
-<script src="/bower_components/ember/ember.js"></script>
-<script src="/bower_components/ember-data/ember-data.js"></script>
-<script src="/bower_components/ember-data-sails-adapter/ember-data-sails-adapter.js"></script>
-<script src="/bower_components/ember-addons.bs_for_ember/dist/js/bs-core.max.js"></script>
-<script src="/bower_components/ember-auth/dist/ember-auth.js"></script>
-<script src="/bower_components/ember-i18n/lib/i18n.js"></script>
-<script src="/bower_components/showdown/src/showdown.js"></script>
-<script src="/js/ember/emberApp.js"></script>
-<script src="/js/ember/messenger/routes.js"></script>
-<script src="/js/ember/posts/routes.js"></script>
-<!--SCRIPTS END-->
-
-
-<!--TEMPLATES-->
-<script type="text/javascript" src="/tpls.hbs.js"></script>
-<!--TEMPLATES END-->
-
 
 </body></html>

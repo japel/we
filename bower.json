@@ -20,7 +20,12 @@
     "ember-data-sails-adapter": "~2.0.0",
     "ember": "~1.5.1",
     "jquery": "~2.1.1",
-    "showdown": "~0.3.1"
+    "showdown": "~0.3.1",
+    "polymer": "Polymer/polymer#~0.2.4",
+    "core-elements": "Polymer/core-elements#~0.2.4",
+    "polymer-elements": "Polymer/polymer-elements#~0.2.4",
+    "polymer-ui-elements": "Polymer/polymer-ui-elements#~0.2.4",
+    "core-ajax": "Polymer/core-ajax#~0.2.4"
   },
   "license": "MIT",
   "authors": [

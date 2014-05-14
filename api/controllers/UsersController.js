@@ -23,21 +23,7 @@ module.exports = {
 
       // Found multiple users!
       } else {
-        res.format({
-           'text/html': function(){
-            // TODO add suport to html requests
-              res.view("home/index.ejs");
-            /*
-             res.view({
-                users: users
-              });
-            */
-           },
-
-           'application/json': function(){
-             res.send(users);
-           }
-        });
+        res.send(users);
       }
     });
   },

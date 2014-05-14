@@ -26,6 +26,10 @@ var jsFilesToInject = [
   // Below, as a demonstration, you'll see the built-in dependencies
   // linked in the proper order order
 
+  'bower_components/platform/platform.js',
+
+
+
   // Bring in the socket.io client
   'js/libs/socket.io.js',
 
@@ -41,27 +45,7 @@ var jsFilesToInject = [
   //
 
   'bower_components/jquery/dist/jquery.js',
-  'bower_components/handlebars/handlebars.js',
 
-  'bower_components/ember/ember.js',
-  'bower_components/ember-data/ember-data.js',
-
-  'bower_components/ember-data-sails-adapter/ember-data-sails-adapter.js',
-
-
-  'bower_components/ember-addons.bs_for_ember/dist/js/bs-core.max.js',
-
-  'bower_components/ember-auth/dist/ember-auth.js',
-  'bower_components/ember-i18n/lib/i18n.js',
-
-  'bower_components/showdown/src/showdown.js',
-
-
-  'js/ember/emberApp.js',
-
-
-  'js/ember/!(tests)**/*.js',
-  'js/ember/*.js',
   // All of the rest of your app scripts
   //'js/**/*.js',
 
